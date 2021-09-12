@@ -1,6 +1,6 @@
 {
-    "name": "progdog-ru/cakephp-coming-soon",
-    "description": "ComingSoon plugin for CakePHP",
+    "name": "progdog-ru/coming-soon",
+    "description": "ProgdogRu/ComingSoon plugin for CakePHP",
     "type": "cakephp-plugin",
     "license": "MIT",
     "require": {
@@ -12,12 +12,12 @@
     },
     "autoload": {
         "psr-4": {
-            "ComingSoon\\": "src/"
+            "ProgdogRu\\ComingSoon\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ComingSoon\\Test\\": "tests/",
+            "ProgdogRu\\ComingSoon\\Test\\": "tests/",
             "Cake\\Test\\": "vendor/cakephp/cakephp/tests/"
         }
     }

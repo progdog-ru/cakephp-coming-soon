@@ -1,6 +1,6 @@
 <?php
 
-namespace ComingSoon\Middleware;
+namespace ProgdogRu\ComingSoon\Middleware;
 
 use Cake\Core\InstanceConfigTrait;
 use Cake\Utility\Inflector;

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace ComingSoon;
+namespace ProgdogRu\ComingSoon;
 
 use Cake\Core\BasePlugin;
 use Cake\Core\PluginApplicationInterface;
@@ -9,7 +9,7 @@ use Cake\Http\MiddlewareQueue;
 use Cake\Routing\RouteBuilder;
 
 /**
- * Plugin for ComingSoon
+ * Plugin for ProgdogRu\ComingSoon
  */
 class Plugin extends BasePlugin
 {
@@ -38,8 +38,8 @@ class Plugin extends BasePlugin
     public function routes(RouteBuilder $routes): void
     {
         $routes->plugin(
-            'ComingSoon',
-            ['path' => '/coming-soon'],
+            'ProgdogRu/ComingSoon',
+            ['path' => '/progdog-ru/coming-soon'],
             function (RouteBuilder $builder) {
                 // Add custom routes here
 
