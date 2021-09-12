@@ -20,7 +20,7 @@ class ComingSoonMiddleware
         'className' => 'Cake\View\View',
         'templatePath' => 'ComingSoon',
 
-        'configPath' => 'Settings.is_coming_soon',
+        'configPath' => 'Settings.progdog-ru.coming-soon.enable',
         'statusCode' => 200,
 
         'templateFileName' => 'coming_soon',

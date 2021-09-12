@@ -1,12 +1,15 @@
 <?php
+
 declare(strict_types=1);
 
 namespace ProgdogRu\ComingSoon;
 
 use Cake\Core\BasePlugin;
+use Cake\Core\Configure;
 use Cake\Core\PluginApplicationInterface;
 use Cake\Http\MiddlewareQueue;
 use Cake\Routing\RouteBuilder;
+use ProgdogRu\ComingSoon\Middleware\ComingSoonMiddleware;
 
 /**
  * Plugin for ProgdogRu\ComingSoon
@@ -24,6 +27,11 @@ class Plugin extends BasePlugin
      */
     public function bootstrap(PluginApplicationInterface $app): void
     {
+        $config_path = $this->getConfigPath();
+
+        if (file_exists($config_path . 'settings.php')) {
+            Configure::load('ProgdogRu/ComingSoon.settings', 'default');
+        }
     }
 
     /**
@@ -58,7 +66,9 @@ class Plugin extends BasePlugin
     public function middleware(MiddlewareQueue $middlewareQueue): MiddlewareQueue
     {
         // Add your middlewares here
-
+        $middlewareQueue->add(new ComingSoonMiddleware([
+            'layout' => 'default'
+        ]));
         return $middlewareQueue;
     }
 }
